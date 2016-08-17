@@ -20,8 +20,6 @@ VS2013的CLR工程，用C++实现joint bayesian算法，并对joint bayesian算�
 
 ##使用
 
-###jointbayesian_cli
-
 实现了JointbBayesian_CLI类，提供了3个接口函数供C#调用<br>
 
 * 训练：void train_jointbayesian(array<double,2>^ train_dataset,array<int>^train_label,int M,int N)<br>
@@ -37,6 +35,7 @@ VS2013的CLR工程，用C++实现joint bayesian算法，并对joint bayesian算�
 　　　　输入：threshold_start：阈值起始值 <br>
 　　　　　　　threshold_end:阈值结束值<br>
 　　　　　　　step:步进长度<br>
+　　　　输出：最高正确率和对应阈值<br>
 训练阶段，调用train_jointbayesian函数<br>
 测试阶段，调用test_jointbayesian和performance_jointbayesian函数<br>
 
