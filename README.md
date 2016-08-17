@@ -26,7 +26,7 @@ VS2013的CLR工程，用C++实现joint bayesian算法，并对joint bayesian算�
 
 * 训练：void train_jointbayesian(array<double,2>^ train_dataset,array<int>^train_label,int M,int N)<br>
 　　　　输入：train_dataset:训练集，二维M*N数组<br>
-　　　　      train_label:训练集标签，一维M*1数组<br>
+　　　　　　　 train_label:训练集标签，一维M*1数组<br>
 　　　　输出：计算出模型矩阵A,G,并存储为dat文件
 
 * 测试：void test_jointbayesian(array<double, 2>^ test_dataset, array<int>^test_label, int M, int N)<br>
@@ -35,8 +35,8 @@ VS2013的CLR工程，用C++实现joint bayesian算法，并对joint bayesian算�
 　　　　输出：计算出测试集的ratio<br>
 * 性能计算：void performance_jointbayesian(double threshold_start, double threshold_end, double step）<br>
 　　　　输入：threshold_start：阈值起始值 <br>
-　　　　　　　　threshold_end:阈值结束值<br>
-　　　　　　　　step:步进长度<br>
+　　　　　　　threshold_end:阈值结束值<br>
+　　　　　　　step:步进长度<br>
 训练阶段，调用train_jointbayesian函数<br>
 测试阶段，调用test_jointbayesian和performance_jointbayesian函数<br>
 
