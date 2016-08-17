@@ -1,0 +1,14 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly jointbayesian_cli, Version=0.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class jointbayesian_cli.JointbBayesian_CLI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    train_jointbayesian(Double[,], Int32[], Int32, Int32): PrivateScope, Public, HideBySig
+    test_jointbayesian(Double[,], Int32[], Int32, Int32): PrivateScope, Public, HideBySig
+    performance_jointbayesian(Double, Double, Double): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
