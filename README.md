@@ -43,4 +43,5 @@ VS2013C#工程，调用C++/CLI封装的dll文件进行训练，测试
 训练阶段，调用train_jointbayesian函数<br>
 批量测试阶段，调用test_jointbayesian和performance_jointbayesian函数<br>
 
-
+##训练集
+训练集和标签的dat文件：[训练集](http://pan.baidu.com/s/1dFiGArR)
