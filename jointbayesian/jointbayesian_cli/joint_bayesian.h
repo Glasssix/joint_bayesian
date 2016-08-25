@@ -18,9 +18,10 @@ class LX_DLL_CLASS JointBayesian{
 public:
 
 	JointBayesian(){};
-	void jointbayesian_train(double* train_dataset,int* train_label,int M,int N);
-	void jointbayesian_test(double* test_dataset, int* test_label, int M, int N);
-	void jointbayesian_performance(double threshold_start, double threshold_end, double step);
+	bool jointbayesian_train(double* train_dataset,int* train_label,int M,int N);
+	double* jointbayesian_test(double* test_dataset, int* test_label, int M, int N);
+	double jointbayesian_performance(double threshold_start, double threshold_end, double step);
+	bool jointbayesian_testPair(double* test_dataset, double threshold, int M, int N);
 
 
 private:

@@ -11,4 +11,5 @@ Class jointbayesian_cli.JointbBayesian_CLI: AutoLayout, AnsiClass, Class, Public
     train_jointbayesian(Double[,], Int32[], Int32, Int32): PrivateScope, Public, HideBySig
     test_jointbayesian(Double[,], Int32[], Int32, Int32): PrivateScope, Public, HideBySig
     performance_jointbayesian(Double, Double, Double): PrivateScope, Public, HideBySig
+    testPair_jointbayesian(Double[,], Double, Int32, Int32): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig

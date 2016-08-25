@@ -2,7 +2,7 @@
 
 
 
-void JointBayesian::jointbayesian_train(double* train_dataset, int* train_label, int M, int N){
+bool JointBayesian::jointbayesian_train(double* train_dataset, int* train_label, int M, int N){
 	cout << "**********train jointbayes***********" << endl;
 	ToMatrix(train_dataset, train_label, M, N,1);
 	int n_dim = dataset.cols();//图片维数
@@ -120,15 +120,16 @@ void JointBayesian::jointbayesian_train(double* train_dataset, int* train_label,
 	write_to_dat(A, "A.dat");
 	write_to_dat(G, "G.dat");
 	cout << "***********train complete***********" << endl;
+	return true;
 }
 
 //测试模型，产生ratio
-void JointBayesian::jointbayesian_test(double* test_dataset, int* test_label, int M, int N){
+double* JointBayesian::jointbayesian_test(double* test_dataset, int* test_label, int M, int N){
 	cout << "**********test jointbayes***********" << endl;
 	//生成数据矩阵，标签矩阵
 	ToMatrix(test_dataset, test_label, M, N,0);
 	int n_pair = testset.rows() / 2;
-	ratio.setZero(1, n_pair);
+    ratio.setZero(1, n_pair);
 	Matrix<double, 1, 1>res;
 	//计算ratio
 	A.setZero(N, N);
@@ -137,12 +138,12 @@ void JointBayesian::jointbayesian_test(double* test_dataset, int* test_label, in
 	read_from_dat(G, "G.dat");
 	for (int i = 0,j=0; i <testset.rows(); i+=2){
 		res = testset.row(i)*A*testset.row(i).transpose() + testset.row(i+1)*A*testset.row(i+1).transpose() - 2 * testset.row(i)*G*testset.row(i + 1).transpose();
-		ratio(0, j++) = res(0, 0);
+		ratio(0,j++) = res(0, 0);
 	}
 }
 
 //计算模型准确率，寻找最佳性能阈值
-void JointBayesian::jointbayesian_performance(double t_s, double t_e, double step){
+double JointBayesian::jointbayesian_performance(double t_s, double t_e, double step){
 	cout << "**********find best threshhold**********"<<endl;
 	int n_pair = testset.rows() / 2;
 	//步进寻找最佳阈值
@@ -150,7 +151,7 @@ void JointBayesian::jointbayesian_performance(double t_s, double t_e, double ste
 	for (double z = t_s; z <= t_e; z += step){
 		int score = 0, y;
 		for (int j = 0; j < n_pair; j++){
-			if (ratio(0, j) >= z)y = 1;
+			if (ratio(0,j) >= z)y = 1;
 			else y = 0;
 			if (testlabel(j, 0) == y)score++;
 		}
@@ -162,6 +163,27 @@ void JointBayesian::jointbayesian_performance(double t_s, double t_e, double ste
 	}
 	cout << "best threshold:" << bestthreshold << endl;
 	cout << "best accuracy:" << bestaccuracy << endl;
+	return bestthreshold;
+}
+//测试单对图片
+bool JointBayesian::jointbayesian_testPair(double* test_pair, double threshold, int M, int N){
+	//生成数据矩阵
+	Matrix<double, 1, Dynamic>x1, x2;
+	x1.setZero(1, N);
+	x2.setZero(1, N);
+	for (int i = 0; i < N; i++){
+		x1(0, i) = test_pair[i];
+		x2(0, i) = test_pair[N + i];
+	}
+	Matrix<double, 1, 1>res;
+	//计算ratio
+	A.setZero(N, N);
+	G.setZero(N, N);
+	read_from_dat(A, "A.dat");
+	read_from_dat(G, "G.dat");
+	res = x1*A*x1.transpose() + x2*A*x2.transpose() - 2 * x1*G*x2.transpose();
+	if (res(0, 0) >= threshold)return true;
+	else return false;
 }
 
 //计算列向量之间协方差，结果为协方差矩阵中的一个元素

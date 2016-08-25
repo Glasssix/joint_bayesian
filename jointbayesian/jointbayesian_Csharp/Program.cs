@@ -38,7 +38,7 @@ namespace jointbayesian_Csharp
                 strLine1 = sw1.ReadLine();
                 strLine2 = sw2.ReadLine();
             }
-           Console.WriteLine("i:{0},label[i]:{1},dataset[i,39]:{2}", i-1, label[i-1], dataset[i-1, 39]);
+          // Console.WriteLine("i:{0},label[i]:{1},dataset[i,39]:{2}", i-1, label[i-1], dataset[i-1, 39]);
             	int[] everyclasscount = new int[20000];//记录每种类别的图片数
 	            int n_class = 1, cnt = 1;//n_class：种类数 cnt：每种种类的数量
 	            for (int z = 0; z <391907; z++){//计算图片种类数（即有多少个不同的人）以及每种图片的个数。
@@ -51,7 +51,7 @@ namespace jointbayesian_Csharp
 		            cnt++;
 	            }
 	            everyclasscount[n_class - 1] = cnt;
-                Console.WriteLine("class:{0}", n_class);
+                //Console.WriteLine("class:{0}", n_class);
                 //生成测试集
                 int pcnt = 0, count = 0;
                 for (int d = 0; d < 100; d++) testlabel[d] = 1;
@@ -69,35 +69,23 @@ namespace jointbayesian_Csharp
                     for(int y=0;y<40;y++) testset[m,y] = dataset[count,y];
                     count += everyclasscount[pcnt++];
                 }
-            //训练
-            JointbBayesian_CLI jointbayesian = new JointbBayesian_CLI();
-            //jointbayesian.train_jointbayesian(dataset,label, 391908, 40);
-            Console.WriteLine("test");
-            jointbayesian.test_jointbayesian(testset, testlabel,400, 40);
-            jointbayesian.performance_jointbayesian(-30, 20, 0.01);
-            Console.ReadLine();
-        }
-        static void read_dat(string filepath)
-        {
-            //string filepath = "dataset.dat";
-            if (File.Exists(filepath))
-            {
-                StreamReader sw = new StreamReader(filepath);
-                 string strLine = sw.ReadLine();
-                    while (!string.IsNullOrEmpty(strLine))
-                    {
-                        string[] array = strLine.Split(' ');
-                            foreach (string str in array)
-                            {
-                                if (str != "")
-                                {
-                                    double a = double.Parse(str);
-                                    Console.WriteLine(a);
-                                }
-                            }
-                        strLine = sw.ReadLine();
-                    }
+            //生成单对测试图片
+            double[,]testpair=new double[2,40];
+            for(int a2=0;a2<40;a2++){
+                testpair[0,a2]=dataset[0,a2];
+                testpair[1,a2]=dataset[everyclasscount[1],a2];
             }
+            //joint bayes
+            JointbBayesian_CLI jointbayesian = new JointbBayesian_CLI();
+            //jointbayesian.train_jointbayesian(dataset,label, 391908, 40);//训练
+            Console.WriteLine("test");
+            jointbayesian.test_jointbayesian(testset, testlabel,400, 40);//测试
+            double threshold=jointbayesian.performance_jointbayesian(-30, 20, 0.01);//计算阈值
+            bool flag = jointbayesian.testPair_jointbayesian(testpair, threshold, 2, 40);//测试单对图片
+            Console.Write("Belong to the same person?:");
+            if(flag)Console.WriteLine("yes");
+            else  Console.WriteLine("no");
+            Console.ReadLine();
         }
     }
 }

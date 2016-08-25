@@ -1,16 +1,83 @@
-﻿生成启动时间为 2016/8/16 23:50:40。
+﻿生成启动时间为 2016/8/25 15:53:11。
      1>项目“C:\Users\machao\Desktop\jointbayesian\jointbayesian_cli\jointbayesian_cli.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         D:\VS2013\VC\bin\CL.exe /c /IC:\eigen3 /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _WINDLL /D _MBCS /EHa /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib joint_bayesian.cpp
+         D:\VS2013\VC\bin\CL.exe /c /IC:\eigen3 /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _WINDLL /D _MBCS /EHa /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib joint_bayesian.cpp jointbayesian_cli.cpp
          joint_bayesian.cpp
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(27): warning C4251: “JointBayesian::dataset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(27): warning C4251: “JointBayesian::testset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(28): warning C4251: “JointBayesian::label”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(28): warning C4251: “JointBayesian::testlabel”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(29): warning C4251: “JointBayesian::A”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(29): warning C4251: “JointBayesian::G”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::ratio”: class“Eigen::Matrix<double,1,-1,1,1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.cpp(123): warning C4793: “JointBayesian::jointbayesian_train”: 编译为本机的函数:
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(28): warning C4251: “JointBayesian::dataset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(28): warning C4251: “JointBayesian::testset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(29): warning C4251: “JointBayesian::label”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(29): warning C4251: “JointBayesian::testlabel”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::A”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::G”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(31): warning C4251: “JointBayesian::ratio”: class“Eigen::Matrix<double,1,-1,1,1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+         jointbayesian_cli.cpp
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(28): warning C4251: “JointBayesian::dataset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(28): warning C4251: “JointBayesian::testset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(29): warning C4251: “JointBayesian::label”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(29): warning C4251: “JointBayesian::testlabel”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::A”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::G”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(31): warning C4251: “JointBayesian::ratio”: class“Eigen::Matrix<double,1,-1,1,1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>jointbayesian_cli.cpp(23): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+         正在生成代码...
+     1>c:\eigen3\eigen\src\core\densecoeffsbase.h(538): warning C4793: “Eigen::DenseCoeffsBase<Eigen::Matrix<double,-1,-1,0,-1,-1>,1>::copyPacket<Eigen::Matrix<double,-1,-1,0,-1,-1>,1,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\densecoeffsbase.h(538): warning C4793: “Eigen::DenseCoeffsBase<Eigen::Matrix<int,-1,1,0,-1,1>,1>::copyPacket<Eigen::Matrix<int,-1,1,0,-1,1>,1,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<int,-1,1,0,-1,1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128i,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128i,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(221): warning C4793: “Eigen::internal::pload<__m128i>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(221): warning C4793: “Eigen::internal::pload<__m128i>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(256): warning C4793: “Eigen::internal::ploadu<__m128i>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(256): warning C4793: “Eigen::internal::ploadu<__m128i>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\densecoeffsbase.h(538): warning C4793: “Eigen::DenseCoeffsBase<Eigen::Matrix<double,1,-1,1,1,-1>,1>::copyPacket<Eigen::Matrix<double,1,-1,1,1,-1>,1,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(274): warning C4793: “Eigen::internal::pstore<double,__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(274): warning C4793: “Eigen::internal::pstore<double,__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(275): warning C4793: “Eigen::internal::pstore<int,__m128i>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(275): warning C4793: “Eigen::internal::pstore<int,__m128i>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.cpp(143): warning C4715: “JointBayesian::jointbayesian_test”: 不是所有的控件路径都返回值
+     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.cpp(124): warning C4793: “JointBayesian::jointbayesian_train”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
      1>c:\eigen3\eigen\src\core\matrix.h(204): warning C4793: “Eigen::Matrix<Eigen::Matrix<double,-1,-1,0,-1,-1>,1000,1,0,1000,1>::Matrix<Eigen::Matrix<double,-1,-1,0,-1,-1>,1000,1,0,1000,1>”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
@@ -131,6 +198,338 @@
      1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
          	托管代码中发现一个不受支持的内部函数
      1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(28): warning C4793: “Eigen::internal::scalar_sum_op<double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(216): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(219): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(222): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(223): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(226): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(228): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(247): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\cwisebinaryop.h(196): warning C4793: “Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(56): warning C4793: “Eigen::internal::scalar_product_op<double,double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\cwisebinaryop.h(196): warning C4793: “Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(56): warning C4793: “Eigen::internal::scalar_product_op<double,double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\cwisebinaryop.h(196): warning C4793: “Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(56): warning C4793: “Eigen::internal::scalar_product_op<double,double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(28): warning C4793: “Eigen::internal::scalar_sum_op<double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\cwisebinaryop.h(196): warning C4793: “Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(56): warning C4793: “Eigen::internal::scalar_product_op<double,double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(28): warning C4793: “Eigen::internal::scalar_sum_op<double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(28): warning C4793: “Eigen::internal::scalar_sum_op<double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\cwisebinaryop.h(196): warning C4793: “Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(56): warning C4793: “Eigen::internal::scalar_product_op<double,double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(28): warning C4793: “Eigen::internal::scalar_sum_op<double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(216): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(219): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(222): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(223): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(226): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(228): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\redux.h(247): warning C4793: “Eigen::internal::redux_impl<Eigen::internal::scalar_sum_op<double>,Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const >,3,0>::run”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\cwisebinaryop.h(196): warning C4793: “Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(56): warning C4793: “Eigen::internal::scalar_product_op<double,double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\cwisebinaryop.h(196): warning C4793: “Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(56): warning C4793: “Eigen::internal::scalar_product_op<double,double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\cwisebinaryop.h(196): warning C4793: “Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(56): warning C4793: “Eigen::internal::scalar_product_op<double,double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(28): warning C4793: “Eigen::internal::scalar_sum_op<double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\cwisebinaryop.h(196): warning C4793: “Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(56): warning C4793: “Eigen::internal::scalar_product_op<double,double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(28): warning C4793: “Eigen::internal::scalar_sum_op<double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(28): warning C4793: “Eigen::internal::scalar_sum_op<double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(123): warning C4793: “Eigen::internal::padd<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\cwisebinaryop.h(196): warning C4793: “Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_product_op<double,double>,Eigen::Transpose<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const > const ,Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\functors.h(56): warning C4793: “Eigen::internal::scalar_product_op<double,double>::packetOp<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(150): warning C4793: “Eigen::internal::pmul<__m128d>”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
      1>c:\eigen3\eigen\src\core\functors.h(28): warning C4793: “Eigen::internal::scalar_sum_op<double>::packetOp<__m128d>”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
@@ -3448,6 +3847,24 @@
          	托管代码中发现一个不受支持的内部函数
      1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(114): warning C4793: “Eigen::internal::pset1<__m128d>”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\densecoeffsbase.h(538): warning C4793: “Eigen::DenseCoeffsBase<Eigen::Map<Eigen::Matrix<double,-1,1,0,-1,1>,0,Eigen::Stride<0,0> >,1>::copyPacket<Eigen::Transpose<Eigen::Matrix<double,1,-1,1,1,-1> const >,1,0>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1> const ,Eigen::Dense>::packet<0>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<0>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,0>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,0>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
      1>c:\eigen3\eigen\src\core\selfcwisebinaryop.h(122): warning C4793: “Eigen::SelfCwiseBinaryOp<Eigen::internal::scalar_sum_op<double>,Eigen::Matrix<double,-1,1,0,-1,1>,Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Map<Eigen::Matrix<double,-1,1,0,-1,1>,1,Eigen::Stride<0,0> > const > >::copyPacket<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Map<Eigen::Matrix<double,-1,1,0,-1,1>,1,Eigen::Stride<0,0> > const >,1,1>”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
      1>c:\eigen3\eigen\src\core\cwiseunaryop.h(120): warning C4793: “Eigen::CwiseUnaryOpImpl<Eigen::internal::scalar_multiple_op<double>,Eigen::Map<Eigen::Matrix<double,-1,1,0,-1,1>,1,Eigen::Stride<0,0> > const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
@@ -4814,6 +5231,54 @@
          	托管代码中发现一个不受支持的内部函数
      1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::Matrix<double,1,-1,1,1,-1>,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::GeneralProduct<Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<double>,Eigen::Matrix<double,1,-1,1,1,-1> const >,Eigen::Matrix<double,-1,-1,0,-1,-1>,4> const ,Eigen::Dense>::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
      1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(294): warning C4793: “Eigen::internal::pstore1<__m128d>”: 编译为本机的函数:
          	托管代码中发现一个不受支持的内部函数
      1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(294): warning C4793: “Eigen::internal::pstore1<__m128d>”: 编译为本机的函数:
@@ -4855,6 +5320,22 @@
      1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
      1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\transpose.h(168): warning C4793: “Eigen::TransposeImpl<Eigen::Matrix<double,1,-1,1,1,-1> const ,Eigen::Dense>::packet<0>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<0>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,0>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,0>”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
      1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
          	托管代码中发现一个不受支持的内部函数
@@ -4930,6 +5411,8 @@
          	托管代码中发现一个不受支持的内部函数
      1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(603): warning C4793: “Eigen::internal::palign_impl<3,__m128d>::run”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
+         D:\VS2013\VC\bin\CL.exe /c /IC:\eigen3 /Zi /clr /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _WINDLL /D _MBCS /EHa /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /TP /analyze- /errorReport:prompt "C:\Users\machao\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
        Link:
          D:\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\machao\Desktop\jointbayesian\Release\jointbayesian_cli.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\machao\Desktop\jointbayesian\Release\jointbayesian_cli.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /SAFESEH /DLL Release\jointbayesian_cli.obj
          Release\joint_bayesian.obj
@@ -4941,4 +5424,4 @@
 
 生成成功。
 
-已用时间 00:00:13.44
+已用时间 00:00:33.92

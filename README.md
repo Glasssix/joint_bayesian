@@ -23,21 +23,26 @@ VS2013µÄCLR¹¤³Ì£¬ÓÃC++ÊµÏÖjoint bayesianËã·¨£¬²¢¶Ôjoint bayesianËã·¨½øĞĞC++/CLI·
 
 ###jointbayesian_cli
 
-ÊµÏÖÁËJointbBayesian_CLIÀà£¬Ìá¹©ÁË3¸ö½Ó¿Úº¯Êı¹©C#µ÷ÓÃ<br>
+ÊµÏÖÁËJointbBayesian_CLIÀà£¬Ìá¹©ÁË4¸ö½Ó¿Úº¯Êı¹©C#µ÷ÓÃ<br>
 
-* ÑµÁ·£ºvoid train_jointbayesian(array<double,2>^ train_dataset,array<int>^train_label,int M,int N)<br>
+* ÑµÁ·£ºbool train_jointbayesian(array<double,2>^ train_dataset,array<int>^train_label,int M,int N)<br>
 ¡¡¡¡¡¡¡¡ÊäÈë£ºtrain_dataset:ÑµÁ·¼¯£¬¶şÎ¬M*NÊı×é<br>
 ¡¡¡¡¡¡¡¡      train_label:ÑµÁ·¼¯±êÇ©£¬Ò»Î¬M*1Êı×é<br>
-¡¡¡¡¡¡¡¡Êä³ö£º¼ÆËã³öÄ£ĞÍ¾ØÕóA,G,²¢´æ´¢ÎªdatÎÄ¼ş
+¡¡¡¡¡¡¡¡Êä³ö£º¼ÆËã³öÄ£ĞÍ¾ØÕóA,G,²¢´æ´¢ÎªdatÎÄ¼ş£¬ÑµÁ·³É¹¦·µ»Øtrue<br>
 
-* ²âÊÔ£ºvoid test_jointbayesian(array<double, 2>^ test_dataset, array<int>^test_label, int M, int N)<br>
+* ÅúÁ¿²âÊÔ£ºvoid test_jointbayesian(array<double, 2>^ test_dataset, array<int>^test_label, int M, int N)<br>
 		¡¡¡¡ÊäÈë£ºtest_dataset£º²âÊÔ¼¯£¬¶şÎ¬M*NÊı×é<br>
 		¡¡¡¡      test_label:²âÊÔ¼¯±êÇ©£¬Ò»Î¬M*1Êı×é<br>
-		    Êä³ö£º¼ÆËã³ö²âÊÔ¼¯µÄratio<br>
-* ĞÔÄÜ¼ÆËã£ºvoid performance_jointbayesian(double threshold_start, double threshold_end, double step£©<br>
+		    Êä³ö£º¼ÆËã³ö²âÊÔ¼¯µÄratio,´æ´¢ÔÚÀàÖĞ£¬ÓÉperformance_jointbayesian£¨£©Ê¹ÓÃ<br>
+* ĞÔÄÜ¼ÆËã£ºdouble performance_jointbayesian(double threshold_start, double threshold_end, double step£©<br>
         ÊäÈë£ºthreshold_start£ºãĞÖµÆğÊ¼Öµ <br>
               threshold_end:ãĞÖµ½áÊøÖµ<br>
               step:²½½ø³¤¶È<br>
+				Êä³ö£ºµ±Ç°²âÊÔ¼¯ÏÂµÄ×î¼ÑãĞÖµ²¢·µ»Ø´ËÖµ
+* µ¥¶ÔÍ¼Æ¬²âÊÔ£ºbool testpair_jointbayesian((array<double, 2>^ test_pair,double threshold,int M,int N)
+				ÊäÈë£ºtest_pair£ºÒ»¶Ô²âÊÔÍ¼Æ¬<br>
+							threshold:ÓÉ performance_jointbayesian()¼ÆËã³öµÄ×î¼ÑãĞÖµ
+				Êä³ö£ºÅĞ¶¨Á½ÕÅÍ¼Æ¬ÊôÓÚÍ¬Ò»ÈË£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
 ÑµÁ·½×¶Î£¬µ÷ÓÃtrain_jointbayesianº¯Êı<br>
-²âÊÔ½×¶Î£¬µ÷ÓÃtest_jointbayesianºÍperformance_jointbayesianº¯Êı<br>
+ÅúÁ¿²âÊÔ½×¶Î£¬µ÷ÓÃtest_jointbayesianºÍperformance_jointbayesianº¯Êı<br>
 
