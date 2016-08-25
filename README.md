@@ -23,9 +23,9 @@ VS2013C#工程，调用C++/CLI封装的dll文件进行训练，测试
 实现了JointbBayesian_CLI类，提供了4个接口函数供C#调用<br>
 
 * 训练：bool train_jointbayesian(array<double,2>^ train_dataset,array<int>^train_label,int M,int N)<br>
-　　　　输入：train_dataset:训练集，二维M*N数组<br>
-　　　　      train_label:训练集标签，一维M*1数组<br>
-　　　　输出：计算出模型矩阵A,G,并存储为dat文件，训练成功返回true<br>
+	输入：train_dataset:训练集，二维M*N数组<br>
+　　　　  train_label:训练集标签，一维M*1数组<br>
+	输出：计算出模型矩阵A,G,并存储为dat文件，训练成功返回true<br>
 
 * 批量测试：void test_jointbayesian(array<double, 2>^ test_dataset, array<int>^test_label, int M, int N)<br>
 		输入：test_dataset：测试集，二维M*N数组<br>
