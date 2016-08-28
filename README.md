@@ -27,8 +27,8 @@ VS2013C#工程，调用C++/CLI封装的dll文件进行训练，测试
 			G_path：G矩阵路径<br>
 * 训练：double train_jointbayesian(array<double,2>^ train_dataset,array<int>^train_label,int trainM,int trainN，
                                  array<double, 2>^ test_dataset, array<int>^test_label, int testM, int testN，
-				double threshold_start, double threshold_end, double step)<br>
-		输入：训练集，测试集，起始阈值及步长
+								double threshold_start, double threshold_end, double step)<br>
+		输入：训练集，测试集，起始阈值及步长<br>
 		输出：计算出模型矩阵A,G,并存储为dat文件，返回测试集最佳阈值true<br>
 * 单对图片测试：bool testpair_jointbayesian((array<double, 2>^ test_pair,double threshold,int M,int N)<br>
 		输入：test_pair：一对测试图片<br>
