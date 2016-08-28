@@ -3,6 +3,6 @@ C:\Users\machao\Desktop\jointbayesian\jointbayesian_Csharp\bin\Release\jointbaye
 C:\Users\machao\Desktop\jointbayesian\jointbayesian_Csharp\bin\Release\jointbayesian_Csharp.pdb
 C:\Users\machao\Desktop\jointbayesian\jointbayesian_Csharp\bin\Release\jointbayesian_cli.dll
 C:\Users\machao\Desktop\jointbayesian\jointbayesian_Csharp\bin\Release\jointbayesian_cli.pdb
-C:\Users\machao\Desktop\jointbayesian\jointbayesian_Csharp\obj\Release\jointbayesian_Csharp.csprojResolveAssemblyReference.cache
 C:\Users\machao\Desktop\jointbayesian\jointbayesian_Csharp\obj\Release\jointbayesian_Csharp.exe
 C:\Users\machao\Desktop\jointbayesian\jointbayesian_Csharp\obj\Release\jointbayesian_Csharp.pdb
+C:\Users\machao\Desktop\jointbayesian\jointbayesian_Csharp\obj\Release\jointbayesian_Csharp.csprojResolveAssemblyReference.cache

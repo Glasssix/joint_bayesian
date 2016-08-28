@@ -4,12 +4,10 @@ Assembly jointbayesian_cli, Version=0.0.*, Culture=固定语言(固定国家/地
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
 Class jointbayesian_cli.JointbBayesian_CLI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Boolean, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Interfaces:
     System.IDisposable
   Methods:
-    train_jointbayesian(Double[,], Int32[], Int32, Int32): PrivateScope, Public, HideBySig
-    test_jointbayesian(Double[,], Int32[], Int32, Int32): PrivateScope, Public, HideBySig
-    performance_jointbayesian(Double, Double, Double): PrivateScope, Public, HideBySig
+    train_jointbayesian(Double[,], Int32[], Int32, Int32, Double[,], Int32[], Int32, Int32, Double, Double, Double): PrivateScope, Public, HideBySig
     testPair_jointbayesian(Double[,], Double, Int32, Int32): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig

@@ -1,6 +1,13 @@
 #include "joint_bayesian.h"
 
 
+JointBayesian::JointBayesian(bool flag, char* A_path, char* G_path){
+	if (flag){
+		read_from_dat(A, A_path);
+		read_from_dat(G, G_path);
+	}
+	//read_from_dat(A,)
+}
 
 bool JointBayesian::jointbayesian_train(double* train_dataset, int* train_label, int M, int N){
 	cout << "**********train jointbayes***********" << endl;
@@ -68,7 +75,7 @@ bool JointBayesian::jointbayesian_train(double* train_dataset, int* train_label,
 	Matrix<double, Dynamic, Dynamic>F,Sg,Sui,Sei;
 	cout << "iterate start"<<endl;
 	//开始迭代
-	for (int l = 0; l < 500; l++){
+	for (int l = 0; l < 5000; l++){
 		cout << "**********iter" << l <<"**********" <<endl;
 		F = Sw.inverse();
 		cout << "cal u,e" << endl;	
@@ -132,10 +139,10 @@ double* JointBayesian::jointbayesian_test(double* test_dataset, int* test_label,
     ratio.setZero(1, n_pair);
 	Matrix<double, 1, 1>res;
 	//计算ratio
-	A.setZero(N, N);
+	/*A.setZero(N, N);
 	G.setZero(N, N);
 	read_from_dat(A, "A.dat");
-	read_from_dat(G, "G.dat");
+	read_from_dat(G, "G.dat");*/
 	for (int i = 0,j=0; i <testset.rows(); i+=2){
 		res = testset.row(i)*A*testset.row(i).transpose() + testset.row(i+1)*A*testset.row(i+1).transpose() - 2 * testset.row(i)*G*testset.row(i + 1).transpose();
 		ratio(0,j++) = res(0, 0);
@@ -177,10 +184,6 @@ bool JointBayesian::jointbayesian_testPair(double* test_pair, double threshold, 
 	}
 	Matrix<double, 1, 1>res;
 	//计算ratio
-	A.setZero(N, N);
-	G.setZero(N, N);
-	read_from_dat(A, "A.dat");
-	read_from_dat(G, "G.dat");
 	res = x1*A*x1.transpose() + x2*A*x2.transpose() - 2 * x1*G*x2.transpose();
 	if (res(0, 0) >= threshold)return true;
 	else return false;
@@ -234,6 +237,7 @@ void JointBayesian::read_from_dat(Matrix<double, Dynamic, Dynamic>&mat, char* fi
 	double temp;
 	int M, N;
 	file >> M >> N;
+	mat.setZero(N, N);
 	for (int i = 0; i < M; i++)
 		for (int j = 0; j < N; j++){
 			file >> temp;
