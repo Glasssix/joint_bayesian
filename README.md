@@ -20,7 +20,7 @@ VS2013C#工程，调用C++/CLI封装的dll文件进行训练，测试
 
 ##使用
 
-实现了JointbBayesian_CLI类，提供了4个接口函数供C#调用<br>
+实现了JointbBayesian_CLI类，提供了2个接口函数供C#调用<br>
 * 构造函数：JointbBayesian_CLI(bool falg,String^ A_path,String^ G_path)<br>
 		输入：flag：是否读取A，G矩阵<br>
 			A_path：A矩阵路径<br>
