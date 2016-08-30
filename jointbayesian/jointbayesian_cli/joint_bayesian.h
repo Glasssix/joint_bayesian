@@ -17,7 +17,7 @@ using namespace std;
 class LX_DLL_CLASS JointBayesian{
 public:
 
-	JointBayesian(bool flag,char* A_path,char* G_path);
+	JointBayesian(bool flag,char* Apath,char* Gpath);
 	bool jointbayesian_train(double* train_dataset,int* train_label,int M,int N);
 	double* jointbayesian_test(double* test_dataset, int* test_label, int M, int N);
 	double jointbayesian_performance(double threshold_start, double threshold_end, double step);
@@ -25,7 +25,8 @@ public:
 
 
 private:
-    bool readAG_flag = true;
+	char* A_path;
+	char* G_path;
 	Matrix<double, Dynamic, Dynamic>dataset,testset;
 	Matrix<int, Dynamic, 1>label,testlabel;
 	Matrix<double, Dynamic, Dynamic>A, G;//´æ´¢ÑµÁ·Ä£ÐÍ

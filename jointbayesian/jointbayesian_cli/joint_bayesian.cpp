@@ -1,7 +1,9 @@
 #include "joint_bayesian.h"
 
 
-JointBayesian::JointBayesian(bool flag, char* A_path, char* G_path){
+JointBayesian::JointBayesian(bool flag, char* Apath, char* Gpath){
+	A_path = Apath;
+	G_path = Gpath;
 	if (flag){
 		read_from_dat(A, A_path);
 		read_from_dat(G, G_path);
@@ -124,8 +126,8 @@ bool JointBayesian::jointbayesian_train(double* train_dataset, int* train_label,
 	F = Sw.inverse();
 	G = -((2 * Su + Sw).inverse())*Su*(Sw.inverse());
 	A = ((Su + Sw).inverse()) - (F + G);
-	write_to_dat(A, "A.dat");
-	write_to_dat(G, "G.dat");
+	write_to_dat(A, A_path);
+	write_to_dat(G, G_path);
 	cout << "***********train complete***********" << endl;
 	return true;
 }
@@ -138,11 +140,6 @@ double* JointBayesian::jointbayesian_test(double* test_dataset, int* test_label,
 	int n_pair = testset.rows() / 2;
     ratio.setZero(1, n_pair);
 	Matrix<double, 1, 1>res;
-	//º∆À„ratio
-	/*A.setZero(N, N);
-	G.setZero(N, N);
-	read_from_dat(A, "A.dat");
-	read_from_dat(G, "G.dat");*/
 	for (int i = 0,j=0; i <testset.rows(); i+=2){
 		res = testset.row(i)*A*testset.row(i).transpose() + testset.row(i+1)*A*testset.row(i+1).transpose() - 2 * testset.row(i)*G*testset.row(i + 1).transpose();
 		ratio(0,j++) = res(0, 0);
