@@ -94,6 +94,7 @@ bool JointBayesian::jointbayesian_train(double* train_dataset, int* train_label,
 			ui.setZero(n_dim, 1);
 			ei.setZero(n_dim, 1);
 			for (int j = 0; j < everyclasscount[i]; j++)ui += SuFG(everyclasscount[i])*(dataset.row(count1 + j).transpose());
+			u.col(i) = ui;
 			count1 += everyclasscount[i];
 			if (everyclasscount[i]>1){
 				for (int k = 0; k < everyclasscount[i]; k++){

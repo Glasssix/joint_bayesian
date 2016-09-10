@@ -1,17 +1,26 @@
-﻿生成启动时间为 2016/8/30 18:36:50。
-     1>项目“C:\Users\machao\Desktop\jointbayesian\jointbayesian_cli\jointbayesian_cli.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2016/9/10 11:20:57。
+     1>项目“C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\jointbayesian_cli\jointbayesian_cli.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         D:\VS2013\VC\bin\CL.exe /c /IC:\eigen3 /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _WINDLL /D _MBCS /EHa /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib joint_bayesian.cpp
+         D:\VS2013\VC\bin\CL.exe /c /IC:\eigen3 /IF:\opencv\build\include /IF:\opencv\build\include\opencv /IF:\opencv\build\include\opencv2 /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _WINDLL /D _MBCS /EHa /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib jointbayesian_cli.cpp joint_bayesian.cpp
+         jointbayesian_cli.cpp
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::dataset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::testset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(31): warning C4251: “JointBayesian::label”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(31): warning C4251: “JointBayesian::testlabel”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(32): warning C4251: “JointBayesian::A”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(32): warning C4251: “JointBayesian::G”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(33): warning C4251: “JointBayesian::ratio”: class“Eigen::Matrix<double,1,-1,1,1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
          joint_bayesian.cpp
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::dataset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::testset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(31): warning C4251: “JointBayesian::label”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(31): warning C4251: “JointBayesian::testlabel”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(32): warning C4251: “JointBayesian::A”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(32): warning C4251: “JointBayesian::G”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.h(33): warning C4251: “JointBayesian::ratio”: class“Eigen::Matrix<double,1,-1,1,1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.cpp(147): warning C4715: “JointBayesian::jointbayesian_test”: 不是所有的控件路径都返回值
-     1>c:\users\machao\desktop\jointbayesian\jointbayesian_cli\joint_bayesian.cpp(133): warning C4793: “JointBayesian::jointbayesian_train”: 编译为本机的函数:
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::dataset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(30): warning C4251: “JointBayesian::testset”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(31): warning C4251: “JointBayesian::label”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(31): warning C4251: “JointBayesian::testlabel”: class“Eigen::Matrix<int,-1,1,0,-1,1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(32): warning C4251: “JointBayesian::A”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(32): warning C4251: “JointBayesian::G”: class“Eigen::Matrix<double,-1,-1,0,-1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.h(33): warning C4251: “JointBayesian::ratio”: class“Eigen::Matrix<double,1,-1,1,1,-1>”需要有 dll 接口由 class“JointBayesian”的客户端使用
+         正在生成代码...
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.cpp(148): warning C4715: “JointBayesian::jointbayesian_test”: 不是所有的控件路径都返回值
+     1>c:\users\machao\documents\github\joint_bayesian\jointbayesian\jointbayesian_cli\joint_bayesian.cpp(134): warning C4793: “JointBayesian::jointbayesian_train”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
      1>c:\eigen3\eigen\src\core\matrix.h(204): warning C4793: “Eigen::Matrix<Eigen::Matrix<double,-1,-1,0,-1,-1>,1000,1,0,1000,1>::Matrix<Eigen::Matrix<double,-1,-1,0,-1,-1>,1000,1,0,1000,1>”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
@@ -5345,15 +5354,77 @@
          	托管代码中发现一个不受支持的内部函数
      1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(603): warning C4793: “Eigen::internal::palign_impl<3,__m128d>::run”: 编译为本机的函数:
          	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\densecoeffsbase.h(538): warning C4793: “Eigen::DenseCoeffsBase<Eigen::Matrix<double,-1,-1,0,-1,-1>,1>::copyPacket<Eigen::Matrix<double,-1,-1,0,-1,-1>,1,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\densecoeffsbase.h(538): warning C4793: “Eigen::DenseCoeffsBase<Eigen::Matrix<int,-1,1,0,-1,1>,1>::copyPacket<Eigen::Matrix<int,-1,1,0,-1,1>,1,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<int,-1,1,0,-1,1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128i,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128i,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(221): warning C4793: “Eigen::internal::pload<__m128i>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(221): warning C4793: “Eigen::internal::pload<__m128i>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(256): warning C4793: “Eigen::internal::ploadu<__m128i>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(256): warning C4793: “Eigen::internal::ploadu<__m128i>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\densecoeffsbase.h(538): warning C4793: “Eigen::DenseCoeffsBase<Eigen::Matrix<double,1,-1,1,1,-1>,1>::copyPacket<Eigen::Matrix<double,1,-1,1,1,-1>,1,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\plainobjectbase.h(191): warning C4793: “Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::packet<1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(290): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\genericpacketmath.h(292): warning C4793: “Eigen::internal::ploadt<__m128d,1>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(220): warning C4793: “Eigen::internal::pload<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(251): warning C4793: “Eigen::internal::ploadu<__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(274): warning C4793: “Eigen::internal::pstore<double,__m128d>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(274): warning C4793: “Eigen::internal::pstore<double,__m128d>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(275): warning C4793: “Eigen::internal::pstore<int,__m128i>”: 编译为本机的函数:
+         	托管代码中发现一个不受支持的内部函数
+     1>c:\eigen3\eigen\src\core\arch\sse\packetmath.h(275): warning C4793: “Eigen::internal::pstore<int,__m128i>”: 编译为本机的函数:
+         	托管代码中不支持对齐数据类型
+         D:\VS2013\VC\bin\CL.exe /c /IC:\eigen3 /IF:\opencv\build\include /IF:\opencv\build\include\opencv /IF:\opencv\build\include\opencv2 /Zi /clr /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _WINDLL /D _MBCS /EHa /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /TP /analyze- /errorReport:prompt "C:\Users\machao\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
        Link:
-         D:\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\machao\Desktop\jointbayesian\Release\jointbayesian_cli.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\machao\Desktop\jointbayesian\Release\jointbayesian_cli.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /SAFESEH /DLL Release\jointbayesian_cli.obj
+         D:\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\Release\jointbayesian_cli.dll" /NOLOGO /LIBPATH:F:\opencv\build\x86\vc12\lib opencv_calib3d2410.lib opencv_contrib2410.lib opencv_core2410.lib opencv_features2d2410.lib opencv_flann2410.lib opencv_gpu2410.lib opencv_highgui2410.lib opencv_imgproc2410.lib opencv_legacy2410.lib opencv_ml2410.lib opencv_nonfree2410.lib opencv_objdetect2410.lib opencv_ocl2410.lib opencv_photo2410.lib opencv_stitching2410.lib opencv_superres2410.lib opencv_ts2410.lib opencv_video2410.lib opencv_videostab2410.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\Release\jointbayesian_cli.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /SAFESEH /DLL Release\jointbayesian_cli.obj
          Release\joint_bayesian.obj
          "Release\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
-            正在创建库 C:\Users\machao\Desktop\jointbayesian\Release\jointbayesian_cli.lib 和对象 C:\Users\machao\Desktop\jointbayesian\Release\jointbayesian_cli.exp
+            正在创建库 C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\Release\jointbayesian_cli.lib 和对象 C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\Release\jointbayesian_cli.exp
          LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能
-         jointbayesian_cli.vcxproj -> C:\Users\machao\Desktop\jointbayesian\Release\jointbayesian_cli.dll
-     1>已完成生成项目“C:\Users\machao\Desktop\jointbayesian\jointbayesian_cli\jointbayesian_cli.vcxproj”(Build 个目标)的操作。
+     1>opencv_ts2410.lib(ts_func.obj) : warning LNK4099: 未找到 PDB“opencv_ts2410.pdb”(使用“opencv_ts2410.lib(ts_func.obj)”或在“C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\Release\opencv_ts2410.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>opencv_ts2410.lib(ts_gtest.obj) : warning LNK4099: 未找到 PDB“opencv_ts2410.pdb”(使用“opencv_ts2410.lib(ts_gtest.obj)”或在“C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\Release\opencv_ts2410.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>opencv_ts2410.lib(ts_perf.obj) : warning LNK4099: 未找到 PDB“opencv_ts2410.pdb”(使用“opencv_ts2410.lib(ts_perf.obj)”或在“C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\Release\opencv_ts2410.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>opencv_ts2410.lib(opencv_ts_pch.obj) : warning LNK4099: 未找到 PDB“opencv_ts2410.pdb”(使用“opencv_ts2410.lib(opencv_ts_pch.obj)”或在“C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\Release\opencv_ts2410.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+         jointbayesian_cli.vcxproj -> C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\Release\jointbayesian_cli.dll
+     1>已完成生成项目“C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\jointbayesian_cli\jointbayesian_cli.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:14.41
+已用时间 00:00:17.71
