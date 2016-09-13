@@ -1,0 +1,6 @@
+E:\VSprojrect\data_normalizationCsharp\data_normalizationCsharp\bin\Debug\data_normalizationCsharp.exe.config
+E:\VSprojrect\data_normalizationCsharp\data_normalizationCsharp\bin\Debug\data_normalizationCsharp.exe
+E:\VSprojrect\data_normalizationCsharp\data_normalizationCsharp\bin\Debug\data_normalizationCsharp.pdb
+E:\VSprojrect\data_normalizationCsharp\data_normalizationCsharp\obj\Debug\data_normalizationCsharp.csprojResolveAssemblyReference.cache
+E:\VSprojrect\data_normalizationCsharp\data_normalizationCsharp\obj\Debug\data_normalizationCsharp.exe
+E:\VSprojrect\data_normalizationCsharp\data_normalizationCsharp\obj\Debug\data_normalizationCsharp.pdb

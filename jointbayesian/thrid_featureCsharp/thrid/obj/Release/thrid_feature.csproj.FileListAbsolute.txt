@@ -1,0 +1,6 @@
+C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\thrid_featureCsharp\thrid\bin\Release\thrid.exe.config
+C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\thrid_featureCsharp\thrid\bin\Release\thrid.exe
+C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\thrid_featureCsharp\thrid\bin\Release\thrid.pdb
+C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\thrid_featureCsharp\thrid\obj\Release\thrid_feature.csprojResolveAssemblyReference.cache
+C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\thrid_featureCsharp\thrid\obj\Release\thrid.exe
+C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\thrid_featureCsharp\thrid\obj\Release\thrid.pdb
