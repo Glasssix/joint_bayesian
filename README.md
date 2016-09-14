@@ -16,6 +16,11 @@ joint bayesian算法的C++实现以及C++/CLI封装
 
 C#测试示例工程，调用C++/CLI封装的dll文件进行训练，测试
 
+###data_normalizationCsharp
+原始数据归一化
+
+###thrid_featureCsharp
+归一化数据转换为三值特征
 
 
 ##Usage/使用
