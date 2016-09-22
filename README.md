@@ -49,12 +49,29 @@ double step)
 <br>
 		输入：训练集，测试集，起始阈值及步长<br>
 		输出：计算出模型矩阵A,G,并存储为dat文件，返回测试集最佳阈值true<br>
+* 批量测试：
+```
+double test_jointbayesian(array<double, 2>^ test_dataset, 
+array<int>^test_label, 
+int testM, 
+int testN，
+double threshold_start, 
+double threshold_end, 
+double step))
+```
+
 * 单对图片测试：`bool testpair_jointbayesian((array<double, 2>^ test_pair, double threshold, int M, int N)`<br>
 		输入：`test_pair`：一对测试图片<br>
 			`threshold`:由 `performance_jointbayesian()`计算出的最佳阈值<br>
 		输出：判定两张图片属于同一人，返回true；否则，返回false<br>
 训练阶段，调用`train_jointbayesian`函数<br>
 测试阶段，调用`testpair_jointbayesian`函数<br>
+
+
+##更新日志
+###2016.9.22：
+1.改进了Su，Sw协方差矩阵计算方法，加快了训练速度。
+2.提供了独立的批量测试函数test_jointbayesian;
 
 ##Training Dataset/训练集
 训练集和标签的dat文件：[训练集](http://pan.baidu.com/s/1dFiGArR)
