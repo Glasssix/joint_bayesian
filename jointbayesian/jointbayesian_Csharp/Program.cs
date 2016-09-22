@@ -13,14 +13,14 @@ namespace jointbayesian_Csharp
         static void Main(string[] args)
         {
             //生成训练集
-            double[,] dataset = new double[391908,40];
-            int[] label = new int[391908];
+         /*   double[,] dataset = new double[102524,160];
+            int[] label = new int[102524];
             int i = 0, j = 0;
 
-            double[,] set = new double[30, 40];
-            int[] label1 = new int[15] { 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 };
-            StreamReader sw1 = new StreamReader("dataset.dat");
-            StreamReader sw2 = new StreamReader("label.dat");
+            //double[,] set = new double[30, 40];
+           // int[] label1 = new int[15] { 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 };
+            StreamReader sw1 = new StreamReader("casia_croped_1500_222500_ip1.dat");
+            StreamReader sw2 = new StreamReader("casia_croped_label_1500.dat");
            // StreamReader sw1 = new StreamReader("testdate.txt");
             string strLine1 = sw1.ReadLine();
             string strLine2 = sw2.ReadLine();
@@ -34,7 +34,7 @@ namespace jointbayesian_Csharp
                     {
                         dataset[i,j++] = double.Parse(str);
                        // Console.Write("{0} ",dataset[i, j - 1]);
-                        if (j >= 40) j = 0;
+                        if (j >= 160) j = 0;
                     }
                 }
                 //Console.Write("\n");
@@ -44,7 +44,7 @@ namespace jointbayesian_Csharp
             }
             int[] everyclasscount = new int[20000];//记录每种类别的图片数
 	        int n_class = 1, cnt = 1;//n_class：种类数 cnt：每种种类的数量
-	        for (int z = 0; z <391907; z++){//计算图片种类数（即有多少个不同的人）以及每种图片的个数。
+	        for (int z = 0; z <102523; z++){//计算图片种类数（即有多少个不同的人）以及每种图片的个数。
 		        if (label[z] != label[z + 1]){
 			        everyclasscount[n_class - 1] = cnt;
 			        n_class++;
@@ -54,117 +54,106 @@ namespace jointbayesian_Csharp
 		        cnt++;
 	        }
 	        everyclasscount[n_class - 1] = cnt;
-                //生成测试集
-                 double[,] testset = new double[42296, 40];
-                 int[] testlabel = new int[21148];
-                 int pcnt = 0, count = 0;
-                 for (int d = 0; d < 10574; d++) testlabel[d] = 1;
-                 for (int k =10574; k <21148; k++) testlabel[k] = 0;
-                 for (int l = 0; l < 10575; l++)
-                 {//正例
-                     if (l != 3749)
-                     {
-                         for (int x = 0; x < 40; x++)
-                         {
-                             testset[pcnt, x] = dataset[count, x];
-                             testset[pcnt+1, x] = dataset[count + 1, x];
-                         }
-                         pcnt += 2;
-                     }
-                     count += everyclasscount[l];
-                 }
-                 int count1 = 0, count2 = 0, count3 = 0,count4=5288;
-                 for (int xw1 = 0; xw1 < 5288; xw1++) count2 += everyclasscount[xw1];
-                 count3 = count2;
-                 for (int m = 0; m < 5287; m++)
-                 {//反例
-                     for (int y = 0; y < 40; y++)
-                     {
-                         testset[pcnt, y] = dataset[count1, y];
-                         testset[pcnt+1, y] = dataset[count2, y];
-                     }
-                     pcnt += 2;
-                     count1 += everyclasscount[m];
-                     count2 += everyclasscount[count4++];
-                 }
-                count1=0;
-                count2=everyclasscount[0];
-                 for (int y1 = 0,y2=0,y3=1; y1 < 2643; y1++)
-                 {
-                     for (int y = 0; y < 40; y++)
-                     {
-                         testset[pcnt, y] = dataset[count1, y];
-                         testset[pcnt+1, y] = dataset[count2, y];
-                     }
-                     pcnt += 2;
-                     count1 += everyclasscount[y2++];
-                     count1 += everyclasscount[y2++];
-                     count2 += everyclasscount[y3++];
-                     count2 += everyclasscount[y3++];
-                 }
-                 count1 = count3;
-                 count2 = count3 + everyclasscount[5288];
-                 for (int y5 = 0,y6=5288,y7=5289; y5 < 2643; y5++)
-                 {
-                     for (int y = 0; y < 40; y++)
-                     {
-                         testset[pcnt, y] = dataset[count1, y];
-                         testset[pcnt+1, y] = dataset[count2, y];
-                     }
-                     pcnt += 2;
-                     count1 += everyclasscount[y6++];
-                     count1 += everyclasscount[y6++];
-                     count2 += everyclasscount[y7++];
-                     count2 += everyclasscount[y7++];
-                 }
-                 for (int y = 0; y < 40; y++)
-                 {
-                     testset[pcnt, y] = dataset[391786, y];
-                     testset[pcnt+1, y] = dataset[391702, y];
-                 }
-               /*  StreamWriter sw3 = new StreamWriter("testset.dat");
-                 StreamWriter sw4 = new StreamWriter("testlabel.dat");
-                 for (int b1 = 0; b1 < 21148; b1++)
-                 {
-                     sw4.WriteLine(testlabel[b1]);
-                 }
-                 for (int b2 = 0; b2 < 42296; b2++)
-                 {
-                     for (int y = 0; y < 40; y++) sw3.Write("{0} ",testset[b2, y]);
-                     sw3.Write("\n");
-                 }
-                 sw3.Close();
-                 sw4.Close();*/
-                 //joint bayes
-                 Console.WriteLine("training start");
+           */
+
+            int i = 0;
+            int j = 0;
+            //读取lfw测试集
+            double[,] testset = new double[11512,160];
+            int[] testlabel = new int[5756];
+            StreamReader sw3 = new StreamReader("lfw_222500_ip1.dat");
+            StreamReader sw4 = new StreamReader("lfw_pair_label.dat");
+            string strLine3 = sw3.ReadLine();
+            while (!string.IsNullOrEmpty(strLine3))// && !string.IsNullOrEmpty(strLine2))
+            {
+                //label[i] = int.Parse(strLine2);
+                string[] array = strLine3.Split(' ');
+                foreach (string str in array)
+                {
+                    if (str != "")
+                    {
+                        testset[i, j++] = double.Parse(str);
+                        // Console.Write("{0} ",dataset[i, j - 1]);
+                        if (j >= 160) j = 0;
+                    }
+                }
+                //Console.Write("\n");
+                i++;
+                strLine3 = sw3.ReadLine();
+               // strLine2 = sw2.ReadLine();
+            }
+            i = 0;
+            j = 0;
+            string strLine4 = sw4.ReadLine();
+            while (!string.IsNullOrEmpty(strLine4))// && !string.IsNullOrEmpty(strLine2))
+            {
+                testlabel[i] = int.Parse(strLine4);
+                //Console.Write("{0} ", testlabel[i]);
+                i++;
+                strLine4 = sw4.ReadLine();
+            }
+            //训练集2
+       /*     i = 0;
+            j = 0;
+            double[,] trainset4038 = new double[9525, 40];
+            int[] trainlabel4038 = new int[9525];
+            StreamReader sw3 = new StreamReader("trainset4038_thridfeature.dat");
+            StreamReader sw4 = new StreamReader("trainlabel4038.dat");
+            // StreamReader sw1 = new StreamReader("testdate.txt");
+            string strLine3 = sw3.ReadLine();
+            string strLine4 = sw4.ReadLine();
+            while (!string.IsNullOrEmpty(strLine3))// && !string.IsNullOrEmpty(strLine2))
+            {
+                trainlabel4038[i] = int.Parse(strLine4);
+                string[] array = strLine3.Split(' ');
+                foreach (string str in array)
+                {
+                    if (str != "")
+                    {
+                        trainset4038[i, j++] = double.Parse(str);
+                        // Console.Write("{0} ",dataset[i, j - 1]);
+                        if (j >= 40) j = 0;
+                    }
+                }
+                //Console.Write("\n");
+                i++;
+                strLine3 = sw3.ReadLine();
+                strLine4 = sw4.ReadLine();
+            }*/
+  
+            //joint bayes
+            Console.WriteLine("training start");
             string Apath=@"C:\Users\machao\Desktop\A.dat";
             string Gpath=@"C:\Users\machao\Desktop\G.dat";
-            JointbBayesian_CLI jointbayesian = new JointbBayesian_CLI(false, Apath, Gpath);
-                 Console.WriteLine("1");
-                 double thr=jointbayesian.train_jointbayesian(dataset,label, 391908, 40,testset,testlabel,42296,40,-30,20,0.01);//训练
-                 Console.WriteLine("threshold{0}",thr);
+            //string Apath = @"D:\A.dat";
+            //string Gpath = @"D:\G.dat";
+            JointbBayesian_CLI jointbayesian = new JointbBayesian_CLI(true, Apath, Gpath);
+            // Console.WriteLine("1");
+            //double thr=jointbayesian.train_jointbayesian(dataset,label, 102524, 160,testset,testlabel,11512,160,-30,20,0.01);//训练
+            double thr = jointbayesian.test_jointbayesian(testset, testlabel, 11512, 160, -30, 20, 0.01);
+            Console.WriteLine("threshold:{0}",thr);
                      //jointbayesian.test_jointbayesian(testset,testlabel,6400, 40);//测试
-                     //double threshold=jointbayesian.performance_jointbayesian(-30, 20, 0.01);//计算阈值
+                    // double threshold=jointbayesian.performance_jointbayesian(-30, 20, 0.01);//计算阈值
 
                      //生成单对测试图片
-                     /* double[,] testpair1 = new double[2, 40];
+                 /*     double[,] testpair1 = new double[2, 40];
                       double[,] testpair2 = new double[2, 40];
                       for (int a2 = 0; a2 < 40; a2++)
                       {
-                          testpair1[0, a2] = dataset[0, a2];
-                          testpair1[1, a2] = dataset[1, a2];
+                          testpair1[0, a2] = dataset[6, a2];
+                          testpair1[1, a2] = dataset[7, a2];
                       }
                       for (int a3 = 0; a3 < 40; a3++)
                       {
                           testpair2[0, a3] = dataset[everyclasscount[0], a3];
                           testpair2[1, a3] = dataset[everyclasscount[0]+1, a3];
                       }
-                          bool flag = jointbayesian.testPair_jointbayesian(testpair1, -4.75, 2, 40);//测试单对图片
+                          bool flag = jointbayesian.testPair_jointbayesian(testpair1, -2.7, 2, 40);//测试单对图片
                           Console.Write("Belong to the same person?:");
                           if (flag) Console.WriteLine("yes");
                           else Console.WriteLine("no");
                           Console.WriteLine(" ");
-                          bool flag1 = jointbayesian.testPair_jointbayesian(testpair2, -4.75, 2, 40);//测试单对图片
+                          bool flag1 = jointbayesian.testPair_jointbayesian(testpair2, -2.7, 2, 40);//测试单对图片
                           Console.Write("Belong to the same person?:");
                           if (flag1) Console.WriteLine("yes");
                           else Console.WriteLine("no");*/

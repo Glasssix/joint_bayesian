@@ -1,5 +1,0 @@
-C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\data_normalizationCsharp\data_normalizationCsharp\bin\Release\data_normalizationCsharp.exe.config
-C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\data_normalizationCsharp\data_normalizationCsharp\bin\Release\data_normalizationCsharp.exe
-C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\data_normalizationCsharp\data_normalizationCsharp\bin\Release\data_normalizationCsharp.pdb
-C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\data_normalizationCsharp\data_normalizationCsharp\obj\Release\data_normalizationCsharp.exe
-C:\Users\machao\Documents\GitHub\joint_bayesian\jointbayesian\data_normalizationCsharp\data_normalizationCsharp\obj\Release\data_normalizationCsharp.pdb

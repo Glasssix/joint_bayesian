@@ -28,9 +28,9 @@ private:
 	char* A_path;
 	char* G_path;
 	Matrix<double, Dynamic, Dynamic>dataset,testset;
-	Matrix<int, Dynamic, 1>label,testlabel;
+	Matrix<int, Dynamic, Dynamic>label, testlabel;
 	Matrix<double, Dynamic, Dynamic>A, G;//´æ´¢ÑµÁ·Ä£ĞÍ
-	Matrix<double, 1, Dynamic>ratio;//´æ´¢²âÊÔ±ÈÂÊ
+	Matrix<double, Dynamic, Dynamic>ratio;//´æ´¢²âÊÔ±ÈÂÊ
 
 	double cov(Matrix<double, Dynamic, Dynamic>&xi, Matrix<double, Dynamic, Dynamic>&xj);
 	void ToMatrix(double* tdataset, int* tlabel, int M, int N,int flag);

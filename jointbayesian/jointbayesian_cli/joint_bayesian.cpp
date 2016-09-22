@@ -60,19 +60,34 @@ bool JointBayesian::jointbayesian_train(double* train_dataset, int* train_label,
 	Matrix<double, Dynamic, Dynamic>Su, Sw,oldSw;
 	Su.setZero(n_dim,n_dim);
 	Sw.setZero(n_dim, n_dim);
+
 	cout << "cal Su,Sw" << endl;
 	//初始化Su，Sw
-	for (int i = 0; i < u.rows(); i++)
-		for (int j = 0; j < u.rows(); j++){
-			Matrix<double, Dynamic, Dynamic>xi, xj;
-			xi = u.row(i);
-			xj = u.row(j);
-			Su(i, j) = cov(xi, xj);
-			xi = e.row(i);
-			xj = e.row(j);
-			Sw(i, j) = cov(xi, xj);
-		}
+	//Su=cov(u)
+	cout << 1 << endl;
+	MatrixXd uT = u.transpose();
+	cout << 2 << endl;
+	MatrixXd meanvec_u = uT.colwise().mean();//计算u的列均值，meanvec为1*u.cols()
+	cout << 3 << endl;
+	RowVectorXd meanvecrow_u(RowVectorXd::Map(meanvec_u.data(), uT.cols()));//1*u.cols()矩阵meanvec_u转换为行向量
+	cout << 4 << endl;
+	uT.rowwise() -= meanvecrow_u;//u减去列均值
+	cout << 5 << endl;
+	Su = (uT.transpose()*uT) / double(uT.rows() - 1);//计算协方差矩阵
+	cout << 6 << endl;
+	//Sw=cov(e)
+	MatrixXd eT = e.transpose();
+	cout << 7 << endl;
+	MatrixXd meanvec_e = eT.colwise().mean();//计算u的列均值，meanvec为1*e.cols()
+	cout << 8 << endl;
+	RowVectorXd meanvecrow_e(RowVectorXd::Map(meanvec_e.data(), eT.cols()));//1*e.cols()矩阵meanvec_e转换为行向量
+	cout << 9 << endl;
+	eT.rowwise() -= meanvecrow_e;//e减去列均值
+	cout << 10 << endl;
+	Sw = (eT.transpose()*eT) / double(eT.rows() - 1);//计算协方差矩阵
+	cout << 12 << endl;
 	oldSw = Sw;
+
 	double convergence = 1, min_convergence = 1;
 	Matrix<double, Dynamic, Dynamic>F,Sg,Sui,Sei;
 	cout << "iterate start"<<endl;
@@ -106,20 +121,34 @@ bool JointBayesian::jointbayesian_train(double* train_dataset, int* train_label,
 		}
 		cout << "cal Su,Sw" << endl;
 		//计算Su,Sw矩阵
-		for (int i = 0; i < u.rows(); i++)
-			for (int j = 0; j < u.rows(); j++){
-				Matrix<double, Dynamic, Dynamic>xi, xj;
-				xi = u.row(i);
-				xj = u.row(j);
-				Su(i, j) = cov(xi, xj);
-				xi = e.row(i);
-				xj = e.row(j);
-				Sw(i, j) = cov(xi, xj);
-			}
+		//Su=cov(u)
+		cout << 1 << endl;
+		uT = u.transpose();
+		cout << 2 << endl;
+		meanvec_u = uT.colwise().mean();//计算u的列均值，meanvec为1*u.cols()
+		cout << 3 << endl;
+		RowVectorXd meanvecrow_u(RowVectorXd::Map(meanvec_u.data(), uT.cols()));//1*u.cols()矩阵meanvec_u转换为行向量
+		cout << 4 << endl;
+		uT.rowwise() -= meanvecrow_u;//u减去列均值
+		cout << 5 << endl;
+		Su = (uT.transpose()*uT) / double(uT.rows() - 1);//计算协方差矩阵
+		cout << 6 << endl;
+		//Sw=cov(e)
+		eT = e.transpose();
+		cout << 7 << endl;
+		meanvec_e = eT.colwise().mean();//计算u的列均值，meanvec为1*e.cols()
+		cout << 8 << endl;
+		RowVectorXd meanvecrow_e(RowVectorXd::Map(meanvec_e.data(), eT.cols()));//1*e.cols()矩阵meanvec_e转换为行向量
+		cout << 9 << endl;
+		eT.rowwise() -= meanvecrow_e;//e减去列均值
+		cout << 10 << endl;
+		Sw = (eT.transpose()*eT) / double(eT.rows() - 1);//计算协方差矩阵
+		cout << 12 << endl;
+
 		//判断Sw是否收敛，收敛则停止迭代，训练结束
 		convergence = (Sw - oldSw).norm() / Sw.norm();
 		cout << "convergence: "<<  convergence << endl;
-		if (convergence < 0.000001)break;
+		if (convergence < 0.00001)break;
 		oldSw = Sw;
 	}
 	cout << "iter end" << endl;
@@ -138,6 +167,17 @@ double* JointBayesian::jointbayesian_test(double* test_dataset, int* test_label,
 	cout << "**********test jointbayes***********" << endl;
 	//生成数据矩阵，标签矩阵
 	ToMatrix(test_dataset, test_label, M, N,0);
+
+
+	/*write_to_dat(testset, "testset11.dat");
+	fstream file1;
+	file1.open("testlabel11.dat", ios::out);
+	for (int i = 0; i < testlabel.rows(); i++){
+		file1 << testlabel(i, 0) << "\n";
+	}
+	file1.close();*/
+
+
 	int n_pair = testset.rows() / 2;
     ratio.setZero(1, n_pair);
 	Matrix<double, 1, 1>res;
@@ -145,6 +185,7 @@ double* JointBayesian::jointbayesian_test(double* test_dataset, int* test_label,
 		res = testset.row(i)*A*testset.row(i).transpose() + testset.row(i+1)*A*testset.row(i+1).transpose() - 2 * testset.row(i)*G*testset.row(i + 1).transpose();
 		ratio(0,j++) = res(0, 0);
 	}
+	write_to_dat(ratio, "ratio.dat");
 }
 
 //计算模型准确率，寻找最佳性能阈值
@@ -168,6 +209,11 @@ double JointBayesian::jointbayesian_performance(double t_s, double t_e, double s
 	}
 	cout << "best threshold:" << bestthreshold << endl;
 	cout << "best accuracy:" << bestaccuracy << endl;
+	fstream result;
+	result.open("result.dat", ios::out);
+	result << "best threshold:" << bestthreshold << "\n";
+	result << "best accuracy:" << bestaccuracy << "\n";
+	result.close();
 	return bestthreshold;
 }
 //测试单对图片
@@ -242,3 +288,18 @@ void JointBayesian::read_from_dat(Matrix<double, Dynamic, Dynamic>&mat, char* fi
 			mat(i, j) = temp;
 		}
 }
+
+//测试模型，产生L1 score
+/*double* JointBayesian::jointbayesian_test(double* test_dataset, int* test_label, int M, int N){
+	cout << "**********test jointbayes***********" << endl;
+	//生成数据矩阵，标签矩阵
+	ToMatrix(test_dataset, test_label, M, N, 0);
+	int n_pair = testset.rows() / 2;
+	ratio.setZero(1, n_pair);
+	Matrix<double, 1, 1>res;
+	for (int i = 0, j = 0; i <testset.rows(); i += 2){
+		res = testset.row(i)*A*testset.row(i).transpose() + testset.row(i + 1)*A*testset.row(i + 1).transpose() - 2 * testset.row(i)*G*testset.row(i + 1).transpose();
+		ratio(0, j++) = res(0, 0);
+	}
+	write_to_dat(ratio, "ratio.dat");
+}*/

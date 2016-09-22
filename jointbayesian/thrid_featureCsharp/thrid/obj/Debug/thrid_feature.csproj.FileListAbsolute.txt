@@ -1,6 +1,0 @@
-E:\VSprojrect\thrid\thrid\bin\Debug\thrid.exe.config
-E:\VSprojrect\thrid\thrid\bin\Debug\thrid.exe
-E:\VSprojrect\thrid\thrid\bin\Debug\thrid.pdb
-E:\VSprojrect\thrid\thrid\obj\Debug\thrid_feature.csprojResolveAssemblyReference.cache
-E:\VSprojrect\thrid\thrid\obj\Debug\thrid.exe
-E:\VSprojrect\thrid\thrid\obj\Debug\thrid.pdb

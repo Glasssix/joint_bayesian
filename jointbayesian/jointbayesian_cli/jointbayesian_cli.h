@@ -18,6 +18,8 @@ namespace jointbayesian_cli {
 		double train_jointbayesian(array<double,2>^ train_dataset,array<int>^train_label,int trainM,int trainN,\
 									 array<double, 2>^ test_dataset, array<int>^test_label, int testM, int testN,\
 									 double threshold_start, double threshold_end, double step);//训练模型，测试并返回最佳阈值
+		double test_jointbayesian(array<double, 2>^ test_dataset, array<int>^test_label, int testM, int testN, \
+			double threshold_start, double threshold_end, double step);//训练模型，测试并返回最佳阈值
 		bool testPair_jointbayesian(array<double, 2>^ test_pair, double threshold, int M, int N);//测试单对图片
 
 	private:
